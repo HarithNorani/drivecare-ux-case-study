@@ -222,7 +222,7 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 .legend-dot { background: var(--primary); display: inline-block; height: 8px; margin-right: 8px; width: 8px; }
 .current-value { color: var(--ink); font-weight: 700; }
 .current-value small { color: var(--muted); font-size: 11px; font-weight: 400; }
-.text-button, .load-more { background: transparent; color: var(--primary); font-size: 13px; font-weight: 700; padding: 4px 0; }
+.text-button { background: transparent; color: var(--primary); font-size: 13px; font-weight: 700; padding: 4px 0; }
 .alert-list { margin-top: 20px; }
 .alert-row {
   align-items: center;
@@ -267,7 +267,7 @@ button:focus-visible, a:focus-visible, select:focus-visible {
 .pill.online { background: var(--canvas-soft); color: #2f6f1d; }
 .pill.monitoring { background: #fff4d6; color: #8a5b00; }
 .more-button { background: transparent; color: var(--muted); letter-spacing: 2px; min-height: 32px; }
-.load-more { display: block; margin: 12px auto 0; }
+.asset-count-note { color: var(--muted); font-size: 11px; margin: 14px 0 0; text-align: center; }
 .detail-dialog {
   max-width: 480px;
   padding: 32px;
