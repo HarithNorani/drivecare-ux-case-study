@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DriveCare — an industrial motor health UX concept by Harith Norani." />
+    <title>DriveCare | Industrial motor health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="DriveCare home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>drivecare</span>
+        </a>
+        <div class="topbar-right">
+          <span class="status-chip"><span class="status-dot"></span><span data-i18n="systemHealthy">All systems healthy</span></span>
+          <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">DE</button>
+          <button class="avatar" type="button" aria-label="Open user menu">HN</button>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Main navigation">
+          <nav>
+            <p class="nav-label" data-i18n="workspace">Workspace</p>
+            <a class="nav-item active" href="#overview"><span class="nav-icon">◈</span><span data-i18n="overview">Overview</span></a>
+            <a class="nav-item" href="#assets"><span class="nav-icon">▦</span><span data-i18n="assets">Assets</span><span class="nav-count">12</span></a>
+            <a class="nav-item" href="#alerts"><span class="nav-icon">⌁</span><span data-i18n="alerts">Alerts</span><span class="nav-count alert-count">3</span></a>
+            <a class="nav-item" href="#reports"><span class="nav-icon">◫</span><span data-i18n="reports">Reports</span></a>
+            <p class="nav-label nav-label-spaced" data-i18n="manage">Manage</p>
+            <a class="nav-item" href="#team"><span class="nav-icon">◎</span><span data-i18n="team">Team</span></a>
+            <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span><span data-i18n="settings">Settings</span></a>
+          </nav>
+          <div class="sidebar-footer">
+            <div class="help-card">
+              <span class="help-icon">?</span>
+              <div><strong data-i18n="needHelp">Need help?</strong><small data-i18n="supportTeam">Contact support team</small></div>
+              <span class="arrow">→</span>
+            </div>
+            <p class="version">DRIVECARE · CONCEPT 01</p>
+          </div>
+        </aside>
+
+        <main class="main-content" id="overview">
+          <section class="page-heading">
+            <div>
+              <p class="eyebrow" data-i18n="plantOverview">Plant overview / Nuremberg site</p>
+              <h1 data-i18n="goodMorning">Good morning, Harith <span>✦</span></h1>
+              <p class="subtitle" data-i18n="subtitle">A clear view of the equipment that keeps your operations moving.</p>
+            </div>
+            <button class="primary-button" id="reportButton" type="button"><span>＋</span><span data-i18n="createReport">Create report</span></button>
+          </section>
+
+          <section class="metric-grid" aria-label="Plant metrics">
+            <article class="metric-card">
+              <div class="metric-head"><span data-i18n="operationalHealth">Operational health</span><span class="metric-icon green">↗</span></div>
+              <strong class="metric-value">96.8<span class="metric-unit">%</span></strong>
+              <div class="metric-foot"><span class="trend positive">↑ 2.4%</span><span data-i18n="vsLastMonth">vs last month</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head"><span data-i18n="activeAssets">Active assets</span><span class="metric-icon blue">◉</span></div>
+              <strong class="metric-value">12<span class="metric-unit"> / 12</span></strong>
+              <div class="metric-foot"><span class="trend positive">●</span><span data-i18n="allConnected">All connected</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head"><span data-i18n="openAlerts">Open alerts</span><span class="metric-icon amber">!</span></div>
+              <strong class="metric-value">03</strong>
+              <div class="metric-foot"><span class="trend warning">2 high priority</span><span data-i18n="needsAttention">needs attention</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-head"><span data-i18n="energyEfficiency">Energy efficiency</span><span class="metric-icon violet">ϟ</span></div>
+              <strong class="metric-value">89.4<span class="metric-unit">%</span></strong>
+              <div class="metric-foot"><span class="trend positive">↑ 4.1%</span><span data-i18n="vsLastMonth2">vs last month</span></div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="panel health-panel">
+              <div class="panel-heading">
+                <div><h2 data-i18n="healthTrend">Health trend</h2><p data-i18n="healthTrendSub">Average equipment health over time</p></div>
+                <select aria-label="Time range"><option>Last 30 days</option><option>Last 90 days</option><option>Last year</option></select>
+              </div>
+              <div class="chart-wrap">
+                <div class="chart-y"><span>100</span><span>90</span><span>80</span><span>70</span><span>60</span></div>
+                <div class="chart">
+                  <div class="chart-grid"><i></i><i></i><i></i><i></i><i></i></div>
+                  <svg viewBox="0 0 700 200" role="img" aria-label="Health trend rising from 82 to 97 percent">
+                    <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#22c78a" stop-opacity=".23"/><stop offset="1" stop-color="#22c78a" stop-opacity="0"/></linearGradient></defs>
+                    <path class="chart-area" d="M0,128 C35,122 53,132 79,113 S130,120 153,96 S200,101 225,91 S265,101 292,78 S344,85 365,62 S410,70 438,56 S475,64 501,40 S548,55 571,42 S620,46 648,25 S680,31 700,15 V200 H0Z"/>
+                    <path class="chart-line" d="M0,128 C35,122 53,132 79,113 S130,120 153,96 S200,101 225,91 S265,101 292,78 S344,85 365,62 S410,70 438,56 S475,64 501,40 S548,55 571,42 S620,46 648,25 S680,31 700,15"/>
+                    <circle cx="700" cy="15" r="5" class="chart-point"/>
+                  </svg>
+                  <div class="chart-x"><span>01 May</span><span>08 May</span><span>15 May</span><span>22 May</span><span>29 May</span></div>
+                </div>
+              </div>
+              <div class="chart-caption"><span><i class="legend-dot"></i><span data-i18n="avgHealth">Average health</span></span><span class="current-value">96.8% <small data-i18n="today">today</small></span></div>
+            </article>
+
+            <article class="panel alerts-panel" id="alerts">
+              <div class="panel-heading"><div><h2 data-i18n="attentionRequired">Attention required</h2><p data-i18n="attentionSub">Prioritized by impact and urgency</p></div><button class="text-button" id="viewAllButton" type="button"><span data-i18n="viewAll">View all</span> →</button></div>
+              <div class="alert-list">
+                <button class="alert-row" data-alert="MTR-042">
+                  <span class="alert-severity critical"></span><span class="alert-content"><strong>Vibration above threshold</strong><small>MTR-042 · Main compressor</small></span><span class="alert-time">12 min</span><span class="row-arrow">›</span>
+                </button>
+                <button class="alert-row" data-alert="MTR-017">
+                  <span class="alert-severity high"></span><span class="alert-content"><strong>Temperature rising</strong><small>MTR-017 · Cooling line B</small></span><span class="alert-time">48 min</span><span class="row-arrow">›</span>
+                </button>
+                <button class="alert-row" data-alert="MTR-008">
+                  <span class="alert-severity medium"></span><span class="alert-content"><strong>Scheduled maintenance</strong><small>MTR-008 · Conveyor 03</small></span><span class="alert-time">2 days</span><span class="row-arrow">›</span>
+                </button>
+              </div>
+              <div class="alert-summary"><span class="summary-icon">✓</span><span data-i18n="noCritical">No critical downtime detected in the last 30 days.</span></div>
+            </article>
+          </section>
+
+          <section class="panel assets-panel" id="assets">
+            <div class="panel-heading"><div><h2 data-i18n="assetStatus">Asset status</h2><p data-i18n="assetStatusSub">A live view of connected motors and drives</p></div><button class="filter-button" type="button">☷ <span data-i18n="filter">Filter</span></button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th data-i18n="asset">Asset</th><th data-i18n="location">Location</th><th data-i18n="health">Health</th><th data-i18n="lastCheck">Last check</th><th data-i18n="status">Status</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><span class="asset-avatar">M</span><strong>MTR-042</strong></td><td>Main compressor</td><td><div class="health-cell"><span class="health-number good">98%</span><span class="mini-bar"><i style="width:98%"></i></span></div></td><td>Today, 09:42</td><td><span class="pill online">Operational</span></td><td><button class="more-button" aria-label="More options">•••</button></td></tr>
+                  <tr><td><span class="asset-avatar blue-avatar">M</span><strong>MTR-017</strong></td><td>Cooling line B</td><td><div class="health-cell"><span class="health-number okay">91%</span><span class="mini-bar"><i class="bar-okay" style="width:91%"></i></span></div></td><td>Today, 09:38</td><td><span class="pill monitoring">Monitoring</span></td><td><button class="more-button" aria-label="More options">•••</button></td></tr>
+                  <tr><td><span class="asset-avatar violet-avatar">M</span><strong>MTR-008</strong></td><td>Conveyor 03</td><td><div class="health-cell"><span class="health-number good">96%</span><span class="mini-bar"><i style="width:96%"></i></span></div></td><td>Today, 09:30</td><td><span class="pill online">Operational</span></td><td><button class="more-button" aria-label="More options">•••</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="load-more" type="button" data-i18n="loadMore">Load 9 more assets</button>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="detailDialog" class="detail-dialog">
+      <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+      <p class="eyebrow">ASSET INSIGHT / <span id="dialogAsset">MTR-042</span></p>
+      <h2 id="dialogTitle">Vibration above threshold</h2>
+      <p class="dialog-copy">The vibration signal is 18% above the configured baseline. Review the recommended next step before the next production cycle.</p>
+      <div class="recommendation"><span>✦</span><div><strong>Recommended action</strong><p>Schedule a bearing inspection within 48 hours.</p></div></div>
+      <div class="dialog-actions"><button class="secondary-button" id="snoozeButton" type="button">Snooze alert</button><button class="primary-button" id="actionButton" type="button">Create work order</button></div>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
