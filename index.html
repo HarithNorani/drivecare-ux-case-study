@@ -7,7 +7,7 @@
     <title>DriveCare | Industrial motor health</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -34,7 +34,7 @@
             <a class="nav-item" href="#reports"><span class="nav-icon">◫</span><span data-i18n="reports">Reports</span></a>
             <p class="nav-label nav-label-spaced" data-i18n="manage">Manage</p>
             <a class="nav-item" href="#team"><span class="nav-icon">◎</span><span data-i18n="team">Team</span></a>
-            <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span><span data-i18n="settings">Settings</span></a>
+            <a class="nav-item" href="#settings"><span class="nav-icon" aria-hidden="true">•</span><span data-i18n="settings">Settings</span></a>
           </nav>
           <div class="sidebar-footer">
             <div class="help-card">
@@ -49,8 +49,8 @@
         <main class="main-content" id="overview">
           <section class="page-heading">
             <div>
-              <p class="eyebrow" data-i18n="plantOverview">Plant overview / Nuremberg site</p>
-              <h1 data-i18n="goodMorning">Good morning, Harith <span>✦</span></h1>
+              <p class="context-line" data-i18n="plantOverview">Plant overview / Nuremberg site</p>
+              <h1 data-i18n="goodMorning">Good morning, Harith</h1>
               <p class="subtitle" data-i18n="subtitle">A clear view of the equipment that keeps your operations moving.</p>
             </div>
             <button class="primary-button" id="reportButton" type="button"><span>＋</span><span data-i18n="createReport">Create report</span></button>
@@ -69,7 +69,7 @@
             </article>
             <article class="metric-card">
               <div class="metric-head"><span data-i18n="openAlerts">Open alerts</span><span class="metric-icon amber">!</span></div>
-              <strong class="metric-value">03</strong>
+              <strong class="metric-value">3</strong>
               <div class="metric-foot"><span class="trend warning">2 high priority</span><span data-i18n="needsAttention">needs attention</span></div>
             </article>
             <article class="metric-card">
@@ -90,7 +90,6 @@
                 <div class="chart">
                   <div class="chart-grid"><i></i><i></i><i></i><i></i><i></i></div>
                   <svg viewBox="0 0 700 200" role="img" aria-label="Health trend rising from 82 to 97 percent">
-                    <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#22c78a" stop-opacity=".23"/><stop offset="1" stop-color="#22c78a" stop-opacity="0"/></linearGradient></defs>
                     <path class="chart-area" d="M0,128 C35,122 53,132 79,113 S130,120 153,96 S200,101 225,91 S265,101 292,78 S344,85 365,62 S410,70 438,56 S475,64 501,40 S548,55 571,42 S620,46 648,25 S680,31 700,15 V200 H0Z"/>
                     <path class="chart-line" d="M0,128 C35,122 53,132 79,113 S130,120 153,96 S200,101 225,91 S265,101 292,78 S344,85 365,62 S410,70 438,56 S475,64 501,40 S548,55 571,42 S620,46 648,25 S680,31 700,15"/>
                     <circle cx="700" cy="15" r="5" class="chart-point"/>
@@ -114,12 +113,12 @@
                   <span class="alert-severity medium"></span><span class="alert-content"><strong>Scheduled maintenance</strong><small>MTR-008 · Conveyor 03</small></span><span class="alert-time">2 days</span><span class="row-arrow">›</span>
                 </button>
               </div>
-              <div class="alert-summary"><span class="summary-icon">✓</span><span data-i18n="noCritical">No critical downtime detected in the last 30 days.</span></div>
+              <div class="alert-summary"><span class="summary-icon">Clear</span><span data-i18n="noCritical">No critical downtime detected in the last 30 days.</span></div>
             </article>
           </section>
 
           <section class="panel assets-panel" id="assets">
-            <div class="panel-heading"><div><h2 data-i18n="assetStatus">Asset status</h2><p data-i18n="assetStatusSub">A live view of connected motors and drives</p></div><button class="filter-button" type="button">☷ <span data-i18n="filter">Filter</span></button></div>
+            <div class="panel-heading"><div><h2 data-i18n="assetStatus">Asset status</h2><p data-i18n="assetStatusSub">A live view of connected motors and drives</p></div><button class="filter-button" type="button"><span data-i18n="filter">Filter</span></button></div>
             <div class="table-wrap">
               <table>
                 <thead><tr><th data-i18n="asset">Asset</th><th data-i18n="location">Location</th><th data-i18n="health">Health</th><th data-i18n="lastCheck">Last check</th><th data-i18n="status">Status</th><th></th></tr></thead>
@@ -138,10 +137,10 @@
 
     <dialog id="detailDialog" class="detail-dialog">
       <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
-      <p class="eyebrow">ASSET INSIGHT / <span id="dialogAsset">MTR-042</span></p>
+      <p class="context-line">Asset insight / <span id="dialogAsset">MTR-042</span></p>
       <h2 id="dialogTitle">Vibration above threshold</h2>
       <p class="dialog-copy">The vibration signal is 18% above the configured baseline. Review the recommended next step before the next production cycle.</p>
-      <div class="recommendation"><span>✦</span><div><strong>Recommended action</strong><p>Schedule a bearing inspection within 48 hours.</p></div></div>
+      <div class="recommendation"><span>Next</span><div><strong>Recommended action</strong><p>Schedule a bearing inspection within 48 hours.</p></div></div>
       <div class="dialog-actions"><button class="secondary-button" id="snoozeButton" type="button">Snooze alert</button><button class="primary-button" id="actionButton" type="button">Create work order</button></div>
     </dialog>
     <div class="toast" id="toast" role="status"></div>
