@@ -4,6 +4,8 @@
 
 **[Open the live prototype](https://harithnorani.github.io/drivecare-ux-case-study/)** · **[View the case study](#case-study)**
 
+For application-ready CV bullets, English/German cover-letter drafts, and interview talking points, see the [Innomotics application package](./APPLICATION_PACKAGE.md).
+
 ## Why this project fits the Innomotics UX Design role
 
 The Working Student UX Design role asks for a user-centred approach to industrial products: user research, feedback analysis, usability testing, user flows, wireframes, interactive prototypes, and close collaboration with product and development teams. DriveCare is a compact demonstration of that full process, focused on a realistic industrial context: helping plant operators understand asset health and decide what to do next.
